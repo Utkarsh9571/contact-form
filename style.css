@@ -106,6 +106,7 @@ input:focus, input:hover, textarea:focus, textarea:hover{
     border: 1px solid var(--Grey-500-medium);
     border-radius: 0.5em;
     display: flex;
+    accent-color: var(--Green-600-medium);
 }
 #request-label{
     background-color: white;
@@ -128,6 +129,7 @@ input:focus, input:hover, textarea:focus, textarea:hover{
     align-items: start;
     margin: 1.5em auto;
     position: relative;
+    accent-color: var(--Green-600-medium);
 }
 .condition label{
     cursor: pointer;
