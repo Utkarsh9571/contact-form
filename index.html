@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+ 
+</head>
+<body>
+  <main class="container" id="container">
+    <article class="contact-form">
+      <header>Contact Us</header>
+
+      <form id="form">
+        <fieldset class="username">
+          <div class="first-name-input">
+            <label for="first-name">First Name <?xml version="1.0" ?><svg fill="hsl(169, 82%, 27%)" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11 6H13V10.079L16.3413 7.73938L17.4885 9.37768L13.7434 12L17.4885 14.6223L16.3413 16.2606L13 13.921V18H11V13.921L7.65864 16.2606L6.51148 14.6223L10.2565 12L6.51147 9.37769L7.65863 7.73938L11 10.079V6Z"/></svg></label>
+            <input type="text" class="" name="first-name" id="first-name" autocomplete="name">
+            <div class="first-name-error error hidden">This field is required</div>
+          </div>
+
+          <div class="last-name-input">
+            <label for="last-name">Last Name <?xml version="1.0" ?><svg fill="hsl(169, 82%, 27%)" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11 6H13V10.079L16.3413 7.73938L17.4885 9.37768L13.7434 12L17.4885 14.6223L16.3413 16.2606L13 13.921V18H11V13.921L7.65864 16.2606L6.51148 14.6223L10.2565 12L6.51147 9.37769L7.65863 7.73938L11 10.079V6Z"/></svg></label>
+            <input type="text" class="" name="last-name" id="last-name">
+            <div class="last-name-error error hidden">This field is required</div>
+          </div>
+        </fieldset>
+
+        <fieldset class="useremail">
+          <div class="email-box">
+            <label for="email-input">Email Address <?xml version="1.0" ?><svg fill="hsl(169, 82%, 27%)" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11 6H13V10.079L16.3413 7.73938L17.4885 9.37768L13.7434 12L17.4885 14.6223L16.3413 16.2606L13 13.921V18H11V13.921L7.65864 16.2606L6.51148 14.6223L10.2565 12L6.51147 9.37769L7.65863 7.73938L11 10.079V6Z"/></svg></label>
+            <input type="email" class="" name="email-input" id="email-input" autocomplete="email">
+            <div class="error-invalid-email error hidden">Please enter a valid email address</div>
+            <div class="error-no-email error hidden">This field is required</div>
+          </div>
+        </fieldset>
+        
+        <fieldset id="query-type" class="query-type">
+          <legend>Query Type <?xml version="1.0" ?><svg fill="hsl(169, 82%, 27%)" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11 6H13V10.079L16.3413 7.73938L17.4885 9.37768L13.7434 12L17.4885 14.6223L16.3413 16.2606L13 13.921V18H11V13.921L7.65864 16.2606L6.51148 14.6223L10.2565 12L6.51147 9.37769L7.65863 7.73938L11 10.079V6Z"/></svg></legend>
+          <div id="enquiry" class="enquiry">
+            <img id="enquiry-selected" src="./assets/images/icon-radio-selected.svg" alt="icon-radio-selected">
+            <label id="enquiry-label" for="general-enquiry">
+              <input type="radio" name="enquiry" id="general-enquiry">
+              General Enquiry</label>
+          </div>
+
+          <div class="request">
+            <img id="support-selected" src="./assets/images/icon-radio-selected.svg" alt="icon-radio-selected">
+            <label id="request-label" for="support-request"><input type="radio" name="enquiry" id="support-request">
+              Support Request</label>
+          </div>
+
+          <div class="error-query error hidden">This field is required</div>
+        </fieldset>
+
+        <fieldset class="message-box">
+          <div class="message-area">
+            <label for="textarea">Message <?xml version="1.0" ?><svg fill="hsl(169, 82%, 27%)" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11 6H13V10.079L16.3413 7.73938L17.4885 9.37768L13.7434 12L17.4885 14.6223L16.3413 16.2606L13 13.921V18H11V13.921L7.65864 16.2606L6.51148 14.6223L10.2565 12L6.51147 9.37769L7.65863 7.73938L11 10.079V6Z"/></svg></label>          
+            <textarea name="textarea" class="" id="textarea" rows="15" cols="30"></textarea>
+            <div class="error-message-box error hidden">This field is required</div>
+          </div>
+        </fieldset>
+
+        
+        <fieldset class="terms">
+          <div class="condition">
+            <input type="checkbox" name="checkbox" id="checkbox"> <img id="icon-checkbox" src="./assets/images/icon-checkbox-check.svg" alt="icon-checkbox-check">
+            <label for="checkbox">I consent to being contacted by the team <?xml version="1.0" ?><svg fill="hsl(169, 82%, 27%)" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M11 6H13V10.079L16.3413 7.73938L17.4885 9.37768L13.7434 12L17.4885 14.6223L16.3413 16.2606L13 13.921V18H11V13.921L7.65864 16.2606L6.51148 14.6223L10.2565 12L6.51147 9.37769L7.65863 7.73938L11 10.079V6Z"/></svg></label>
+          </div>
+          <div class="error-unchecked-terms error hidden">To submit this form, please consent to being contacted</div>
+        </fieldset>       
+
+        <label for="submit-button"></label>
+        <button id="submit-button">Submit</button>
+      </form>
+
+      <div class="success-message">
+        <h1><img src="./assets/images/icon-success-check.svg" alt="icon-success-check">Message Sent!</h1>
+        <h2>Thanks for completing the form. We'll be in touch soon!</h2>
+      </div>
+    </article>
+  </main>
+
+  <script src="main.js"></script>
+
+</body>
+</html>

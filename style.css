@@ -1,0 +1,217 @@
+:root{
+    /*### Primary*/
+
+    --Green-200-lighter: hsl(148, 38%, 91%);
+    --Green-600-medium: hsl(169, 82%, 27%);
+    --Red: hsl(0, 66%, 54%);
+
+    /*### Neutral*/
+
+    --White: hsl(0, 0%, 100%);
+    --Grey-500-medium: hsl(186, 15%, 59%);
+    --Grey-900-darker: hsl(187, 24%, 22%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: Karla, serif;
+    color: var(--Grey-900-darker);
+    background-color: var(--Green-200-lighter);
+}
+fieldset{
+    border: none;
+}
+.container{
+    display: block;
+    background-color: var(--Green-200-lighter);
+    padding: 2em 1em;
+}
+.contact-form{
+    background-color: var(--White);
+    padding: 1.5em;
+    border-radius: 1em;
+    position: relative;
+}
+header{
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 0.5em;
+}
+svg{
+    width: 3%;
+}
+label{
+    font-size: 1.1em;;
+}
+input, textarea, button{
+    width: 100%;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    font-size: 1em;
+    padding: 0.7em;
+    border: 1px solid var(--Grey-500-medium);
+    border-radius: 0.5em;
+}
+input:focus, input:hover, textarea:focus, textarea:hover{
+    outline: 1px solid var(--Green-600-medium);
+    cursor: pointer;
+}
+.invalid{
+    border: 1px solid var(--Red);
+}
+.error{
+    position: absolute;
+    font-size: 1em;
+    color: var(--Red);
+    margin-top: -0.85em;
+}
+.hidden{
+    display: none;
+}
+.enquiry, .request{
+    margin-bottom: 1em;
+    border-radius: 0.5em;
+}
+#enquiry-selected{
+    display: none;
+    position: absolute;
+}
+#support-selected{
+    display: none;
+    position: absolute;
+}
+#request-label:hover, #enquiry-label:hover{
+    outline: 1px solid var(--Green-600-medium);
+    background-color: var(--Green-200-lighter);
+}
+.enquiry input, .request input{
+    outline: none;
+}
+#general-enquiry, #support-request{
+    width: 1.25em;
+    height: 1.25em;
+    margin: 0 1em;
+}
+.query-type label{
+    font-size: 1.15em;
+    cursor: pointer;
+    padding: 0.75em 0;
+    padding-right: 7em;
+    border: 1px solid var(--Grey-500-medium);
+    border-radius: 0.5em;
+    display: flex;
+}
+#request-label{
+    background-color: white;
+    border: 1px solid var(--Grey-500-medium);
+}
+#enquiry-label{
+    background-color: white;
+    border: 1px solid var(--Grey-500-medium);
+}
+.query-type legend{
+    font-size: 1.15em;
+    margin-bottom: 0.5em;
+}
+.message-box input{
+    height: 15em;
+}
+.condition{
+    display: flex;
+    line-height: 0;
+    align-items: start;
+    margin: 1.5em auto;
+    position: relative;
+}
+.condition label{
+    cursor: pointer;
+}
+#icon-checkbox{
+    position: absolute;
+    display: none;
+    top: 9px;
+    cursor: pointer;
+}
+#checkbox{
+    width: 1.25em;
+    height: 1.25em;
+    cursor: pointer;
+}
+.terms input{
+    width: fit-content;
+    margin-right: 1em;
+}
+.terms .error-unchecked-terms{
+    position: relative;
+    width: 100%;
+    margin-top: -1em;
+}
+#submit-button{
+    background-color: var(--Green-600-medium);
+    color: var(--White);
+    padding: 1em;
+    font-size: 1.15em;
+}
+#submit-button:hover{
+    cursor: pointer;
+    background-color: var(--Grey-900-darker);
+}
+.success-message{
+    position: absolute;
+    display: none;
+    justify-self: center;
+    background-color: var(--Grey-900-darker);
+    color: var(--White);
+    border-radius: 0.5em;
+    padding: 2em;
+    width: 60%;
+    top: -1em;
+    left: 1em;
+    right: 1em;
+    transition: 0.5s ease-in-out;
+}
+.success-message h1{
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+    gap: 0.5em;
+}
+.success-message h2{
+    font-size: 0.85em;
+    font-weight: 100;
+}
+
+@media screen and (min-width:900px){
+    .container{
+        padding: 5em;
+    }
+    header{
+        font-size: 3em;
+    }
+    .username{
+        display: flex;
+        gap: 1em;
+    }
+    .query-type{
+        display: flex;
+        gap: 1em;
+    }
+    .enquiry, .request{
+        width: 100%;
+    }
+    .error-query{
+        position: absolute;
+        margin-top: 3.25em;
+    }
+    .success-message{
+        top: -4em;
+    }
+}
